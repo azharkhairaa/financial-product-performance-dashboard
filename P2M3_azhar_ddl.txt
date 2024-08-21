@@ -1,0 +1,41 @@
+-- url dataset
+-- https://www.kaggle.com/datasets/dsfelix/us-stores-sales
+
+-- create database named project_m3
+create database project_m3
+
+-- create table named table_m3
+create table if not exists table_m3(
+	"Area Code" integer,
+	"State" varchar(50),
+  "Market" varchar(25),
+  "Market Size" varchar(50),
+  "Profit" numeric,
+  "Margin" numeric,
+  "Sales" numeric,
+  "COGS" numeric,
+  "Total Expenses" numeric,
+  "Marketing" numeric,
+	"Inventory" numeric,
+  "Budget Profit" numeric,
+	"Budget COGS" numeric,
+	"Budget Margin" numeric,
+	"Budget Sales" numeric,
+  "ProductId" integer,
+  "Date" date,
+  "Product Type" varchar(25),
+  "Product" varchar(25),
+  "Type" varchar(25)
+);
+
+-- insert data from P2M3_azhar_data_raw.csv to table_m3
+copy table_m3(
+  "Area Code", "State", "Market", "Market Size",
+  "Profit", "Margin", "Sales", "COGS",
+  "Total Expenses", "Marketing", "Inventory",
+  "Budget Profit", "Budget COGS", "Budget Margin", "Budget Sales",
+  "ProductId", "Date", "Product Type", "Product", "Type"
+)
+from 'csv/P2M3_azhar_data_raw.csv'
+delimiter ','
+csv header;

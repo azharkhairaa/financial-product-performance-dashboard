@@ -1,0 +1,83 @@
+Conseptual Problems.
+
+1. Jelaskan apa yang dimaksud dengan NoSQL menggunakan pemahaman yang kalian ketahui !
+
+Answer:
+
+NoSQL adalah singkatan dari "Not Only SQL" atau "Not SQL".
+Sama halnya dengan SQL, NoSQL digunakan juga untuk menyimpan, mengelola dan mengakses data namun bisa menangani juga data dengan format non-relasional atau semi-terstruktur.
+Oleh karena itu NoSQL sering digunakan untuk data yang memiliki struktur yang tidak tetap.
+NoSQL lebih fleksibel dan bisa menggunakan berbagai model penyimpanan seperti dokumen, key-value, kolom, atau grafik.
+NoSQL sering digunakan untuk menangani data yang sangat besar atau beragam dan dapat menangani beban kerja dengan skala horizontal,
+artinya menambah lebih banyak server untuk meningkatkan kapasitas.
+
+
+2. Jelaskan kapan harus menggunakan NoSQL dan Relational Database Management System !
+
+Answer:
+
+NoSQL:
+- Ketika berhadapan dengan daya yang semi-terstruktur atau tidak terstruktur seperti dokumen, JSON atau yang lainnya.
+- Ketika fleksibilitas skema dibutuhkan karena data dapat berubah seiring waktu.
+- Ketika aplikasi yang membutuhkan performa tinggi untuk operasi baca/tulis dalam volume besar, seperti aplikasi real-time atau analitik big data.
+
+SQL:
+- Ketika data memiliki struktur yang jelas dan konsisten, dengan relasi antar tabel yang jelas.
+- Ketika data tidak tumbuh dengan sangat cepat dan tetap dalam skala yang dapat dikelola dengan satu server atau beberapa server yang tersinkronisasi.
+- Ketika aplikasi membutuhkan query SQL yang kompleks dengan gabungan beberapa tabel, seperti laporan keuangan atau analisis data.
+
+
+3. Sebutkan contoh 2 tools/platform NoSQL selain ElasticSearch beserta keunggulan tools/platform tersebut !
+
+Answer:
+
+MongoDB
+- Skema fleksibel dengan format dokumen JSON-like (BSON).
+- Kinerja tinggi untuk operasi baca dan tulis dengan indexing dan penyimpanan in-memory.
+- Efektif dalam menangani data tidak terstruktur atau semi-struktur.
+- Kompatibilitas dengan berbagai layanan cloud seperti AWS, Azure, Google Cloud, dan platform cloud khusus seperti MongoDB Atlas.
+
+Cassandra
+- Skalabilitas tinggi dengan arsitektur peer-to-peer yang memungkinkan distribusi data secara merata di seluruh node dalam cluster.
+- Latensi rendah untuk operasi baca/tulis menghasilkan performa yang cepat.
+- Kemampuan untuk menangani volume data yang sangat besar di banyak data center tanpa satu titik kegagalan, meningkatkan keandalan dan ketersediaan.
+- Cocok untuk aplikasi dengan kebutuhan uptime yang tinggi, seperti aplikasi perbankan, e-commerce dan layanan online lainnya yang memerlukan ketersediaan 24/7.
+
+
+4. Jelaskan apa yang Anda ketahui dari Airflow menggunakan pemahaman dan bahasa Anda sendiri !
+
+Answer:
+
+Airflow adalah platform manajemen alur kerja yang digunakan untuk membuat, menjadwalkan, dan memonitor alur kerja yang kompleks.
+Dalam Airflow, alur kerja digambarkan sebagai Directed Acyclic Graphs (DAGs), di mana setiap node adalah tugas (task) yang dapat dijalankan secara independen.
+Airflow memungkinkan pengelolaan dependensi antar tugas, penjadwalan tugas berdasarkan waktu atau pemicu lain, serta pemantauan status eksekusi melalui interface yang interaktif.
+Airflow cocok digunakan dalam pengelolaan alur kerja data pipeline yang kompleks, misalnya dalam ETL (Extract, Transform, Load), pemrosesan batch atau orkestrasi tugas-tugas machine learning.
+
+
+5. Jelaskan apa yang Anda ketahui dari Great Expectations menggunakan pemahaman dan bahasa Anda sendiri !
+
+Answer:
+
+Great Expectations merupakan alat open-source untuk melakukan validasi data untuk memastikan bahwa data yang digunakan atau simpan sesuai dengan ekspektasi atau aturan yang ditentukan.
+Great Expectations dapat membuat, menyimpan, dan menjalankan "expectations" atau aturan-aturan validasi data terhadap dataset,
+yang mencakup pengecekan tipe data, rentang nilai, konsistensi dan lainnya.
+Alat ini dapat diintegrasikan dalam pipeline data untuk secara otomtis melakukan validasi data pada setiap langkah,
+membantu mencegah masuknya data yang tidak valid ke dalam sistem analitik atau machine learning.
+
+
+6. Jelaskan apa yang Anda ketahui dari Batch Processing menggunakan pemahaman dan bahasa Anda sendiri (Definisi, Contoh Kasus Penggunaan, Tools, dll) !
+
+Answer:
+
+Batch processing adalah metode pemrosesan data di mana data dikumpulkan dan diproses dalam kelompok atau batch
+dalam waktu yang telah ditentukan atau berdasarkan kondisi tertentu.
+Proses ini berbeda dengan pemrosesan data secara real-time, di mana data diproses segera setelah diterima.
+Batch processing sangat efektif untuk tugas yang tidak memerlukan hasil instan,
+tetapi membutuhkan pengolahan data dalam jumlah besar dan skala besar pada interval yang teratur.
+
+Contoh penggunaan:
+- Pemrosesan gaji bulanan: Menghitung dan mengirimkan gaji ke pegawai pada akhir bulan.
+- Menjalankan proses ETL untuk memuat data ke data warehouse sekali sehari.
+
+Tools:
+- Apache Spark: Digunakan untuk pemrosesan batch dan analitik data skala besar, memungkinkan eksekusi cepat atas data dalam skala terabyte atau lebih.
